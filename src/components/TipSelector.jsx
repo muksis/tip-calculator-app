@@ -4,13 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 const TipSelector = ({ tipPercentage, setTipPercentage }) => {
   const [isTyping, setIsTyping] = useState(false);
 
-  const numberValidation = /^(|[0-9]+)$/;
-  const handleCustomInput = (e) => {
-    const newValue = e.target.value;
-    if (numberValidation.test(newValue)) {
-      setTipPercentage(parseInt(newValue, 10) || 0);
-    }
-  };
+  const handleCustomInput = (e) => setTipPercentage(+e.target.value || 0);
 
   return (
     <div className='tipSelect d-flex flex-row flex-wrap mb-5'>
@@ -54,6 +48,7 @@ const TipSelector = ({ tipPercentage, setTipPercentage }) => {
         id='inputCustomTip'
         placeholder='Custom'
         autoComplete='off'
+        type='number'
         value={
           isTyping || [0, 5, 10, 15, 25, 50].indexOf(tipPercentage) === -1
             ? tipPercentage

@@ -1,9 +1,36 @@
-# Frontend Mentor – Tip Calculator App
+# Frontend Mentor - Tip calculator app solution
 
-## Description
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-This is a front-end [challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX) built with ReactJS, Bootstrap and SCSS and hosted on Heroku.
+## Table of contents
 
-## How to run
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Built with](#built-with)
 
-In the project directory, you can run 'npm start' and open [http://localhost:3000](http://localhost:3000) to view it in your browser or just click [here](https://).
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Calculate the correct tip and total cost of the bill per person
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://github.com/muksis/tip-calculator-app)
+- Live Site URL: [Add live site URL here](https://rocket-tip.herokuapp.com)
+
+### Built with
+
+- ReactJS
+- Bootstrap
+- SCSS

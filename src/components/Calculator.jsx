@@ -41,20 +41,10 @@ const Calculator = () => {
     setTipPercentage('');
   };
 
-  const numberValidation = /^(|[0-9]+)$/;
-  const handleBillAmountInput = (e) => {
-    const newValue = e.target.value;
-    if (numberValidation.test(newValue)) {
-      setBillAmount(parseInt(newValue, 10) || 0);
-    }
-  };
+  const handleBillAmountInput = (e) => setBillAmount(+e.target.value || 0);
 
-  const handleNumberOfPeopleInput = (e) => {
-    const newValue = e.target.value;
-    if (numberValidation.test(newValue)) {
-      setNumberOfPeople(parseInt(newValue, 10) || 0);
-    }
-  };
+  const handleNumberOfPeopleInput = (e) =>
+    setNumberOfPeople(+e.target.value || 0);
 
   return (
     <Container fluid='sm' className='calculator'>
@@ -74,6 +64,7 @@ const Calculator = () => {
               id='inputBill'
               placeholder='0'
               autoComplete='off'
+              type='number'
               value={billAmount !== 0 ? billAmount : ''}
               onChange={handleBillAmountInput}
             />
@@ -100,6 +91,7 @@ const Calculator = () => {
               id='inputPerson'
               placeholder='0'
               autoComplete='off'
+              type='number'
               value={numberOfPeople !== 0 ? numberOfPeople : ''}
               onChange={handleNumberOfPeopleInput}
             />
