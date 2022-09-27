@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Demo](https://github.com/muksis/tip-calculator-app)
-- Live Site URL: [Code](https://rocket-tip.herokuapp.com)
+- Solution URL: [Code](https://github.com/muksis/tip-calculator-app)
+- Live Site URL: [Demo](https://rocket-tip.herokuapp.com)
 
 ### Built with
 
