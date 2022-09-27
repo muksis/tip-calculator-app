@@ -52,6 +52,18 @@ body {
       box-shadow: 2px 0px 0px $strongCyan inset, -2px 0px 0px $strongCyan inset,
         0px 2px 0px $strongCyan inset, 0px -2px 0px $strongCyan inset;
     }
+    input.is-valid {
+      box-shadow: 2px 0px 0px #c00 inset, -2px 0px 0px #c00 inset,
+        0px 2px 0px #c00 inset, 0px -2px 0px #c00 inset;
+      background-image: none;
+      padding-right: 12px;
+    }
+
+    .invalidFeedback {
+      float: right;
+      color: #c66;
+      font-size: 15px;
+    }
 
     .tipSelect {
       gap: 20px;
