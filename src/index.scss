@@ -48,6 +48,11 @@ body {
       color: $grayishCyan;
     }
 
+    input:focus {
+      box-shadow: 2px 0px 0px $strongCyan inset, -2px 0px 0px $strongCyan inset,
+        0px 2px 0px $strongCyan inset, 0px -2px 0px $strongCyan inset;
+    }
+
     .tipSelect {
       gap: 20px;
 

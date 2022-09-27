@@ -16,15 +16,9 @@ const Results = ({ tipAmount, total, onReset }) => {
         <sub>/ person</sub>
       </div>
       <div className='numericValue'>${padWithZeroes(total)}</div>
-      <div>
-        <Button
-          className='resetButton'
-          disabled={total === 0}
-          onClick={onReset}
-        >
-          Reset
-        </Button>
-      </div>
+      <Button className='resetButton' disabled={total === 0} onClick={onReset}>
+        Reset
+      </Button>
     </div>
   );
 };
