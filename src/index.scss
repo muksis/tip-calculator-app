@@ -25,4 +25,11 @@ body {
   .header {
     justify-content: center;
   }
+
+  .calculator {
+    display: flex-column;
+    background-color: $white;
+    border-radius: 20px;
+    padding: 45px;
+  }
 }
