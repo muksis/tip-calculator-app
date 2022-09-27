@@ -47,10 +47,43 @@ body {
       color: $grayishCyan;
     }
 
+    .tipSelect {
+      gap: 20px;
+
+      .btn {
+        background-color: $veryDarkCyan;
+        color: $veryLightGrayishCyan;
+        border: none;
+        padding: 10px;
+        font-size: $baseFontSize;
+        width: calc((100% - 40px) / 3) !important;
+
+        &:hover {
+          background-color: $lightStrongCyan;
+          color: $veryDarkCyan;
+        }
+        &.active {
+          background-color: $strongCyan;
+          color: $veryDarkCyan;
+        }
+      }
+      input {
+        width: calc((100% - 40px) / 3) !important;
+      }
+    }
+
     .form-label {
       display: block;
       color: $darkGrayishCyan;
       font-size: 17px;
+    }
+
+    .form-control {
+      text-align: right;
+      font-size: $baseFontSize;
+      color: $veryDarkCyan;
+      border: 0;
+      background-color: $veryLightGrayishCyan;
     }
 
     .input-group-text {
