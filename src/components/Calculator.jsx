@@ -2,6 +2,7 @@ import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
 import iconDollar from '../images/icon-dollar.svg';
 import iconPerson from '../images/icon-person.svg';
 import TipSelector from './TipSelector';
+import Results from './Results';
 
 const Calculator = () => {
   return (
@@ -30,7 +31,9 @@ const Calculator = () => {
             <Form.Control id='inputBill' placeholder='0' autoComplete='off' />
           </InputGroup>
         </Col>
-        <Col>{/* Results */}</Col>
+        <Col>
+          <Results />
+        </Col>
       </Row>
     </Container>
   );
