@@ -35,6 +35,12 @@ const Calculator = () => {
     );
   }, [billAmount, numberOfPeople, tipPercentage]);
 
+  const handleReset = () => {
+    setBillAmount('');
+    setNumberOfPeople('');
+    setTipPercentage('');
+  };
+
   const numberValidation = /^(|[0-9]+)$/;
   const handleBillAmountInput = (e) => {
     const newValue = e.target.value;
@@ -92,7 +98,7 @@ const Calculator = () => {
           </InputGroup>
         </Col>
         <Col>
-          <Results tipAmount={tipAmount} total={total} />
+          <Results tipAmount={tipAmount} total={total} onReset={handleReset} />
         </Col>
       </Row>
     </Container>
