@@ -1,7 +1,11 @@
-import React from 'react';
+import logo from '../images/logo.svg';
 
 const Header = () => {
-  return <div></div>;
+  return (
+    <div className='header text-center'>
+      <img src={logo} alt='logo' />
+    </div>
+  );
 };
 
 export default Header;

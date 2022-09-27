@@ -18,3 +18,11 @@ body {
   font-size: $baseFontSize;
   background-color: $lightGrayishCyan;
 }
+
+.app {
+  display: flex-column;
+
+  .header {
+    justify-content: center;
+  }
+}
