@@ -60,6 +60,9 @@ const Calculator = () => {
     <Container fluid='sm' className='calculator'>
       <Row>
         <Col md className='mb-md-0 mb-5'>
+          {billAmount === 0 && (
+            <div className='invalidFeedback'>Can't be zero</div>
+          )}
           <Form.Label htmlFor='inputBill'>Bill</Form.Label>
           {/* Bill */}
           <InputGroup>
@@ -80,6 +83,9 @@ const Calculator = () => {
             tipPercentage={tipPercentage}
             setTipPercentage={setTipPercentage}
           />
+          {numberOfPeople === 0 && (
+            <div className='invalidFeedback'>Can't be zero</div>
+          )}
           {/* Number of People */}
           <Form.Label htmlFor='inputNumberOfPeople'>
             Number of People
