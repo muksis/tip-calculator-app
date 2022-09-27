@@ -4,8 +4,12 @@ import { Button, Form } from 'react-bootstrap';
 const TipSelector = ({ tipPercentage, setTipPercentage }) => {
   const [isTyping, setIsTyping] = useState(false);
 
+  const numberValidation = /^(|[0-9]+)$/;
   const handleCustomInput = (e) => {
-    setTipPercentage(+e.target.value);
+    const newValue = e.target.value;
+    if (numberValidation.test(newValue)) {
+      setTipPercentage(parseInt(newValue, 10) || 0);
+    }
   };
 
   return (

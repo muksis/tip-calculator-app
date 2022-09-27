@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
 import iconDollar from '../images/icon-dollar.svg';
 import iconPerson from '../images/icon-person.svg';
@@ -9,13 +9,45 @@ const Calculator = () => {
   const [billAmount, setBillAmount] = useState('');
   const [numberOfPeople, setNumberOfPeople] = useState('');
   const [tipPercentage, setTipPercentage] = useState('');
+  const [tipAmount, setTipAmount] = useState(0);
+  const [total, setTotal] = useState(0);
 
+  useEffect(() => {
+    const parsedBillAmount = parseFloat(billAmount) || 0;
+    const parsedTipMultiplier = (parseFloat(tipPercentage) || 0) / 100;
+    const parsedNumberOfPeople = parseInt(numberOfPeople, 10) || 0;
+    setTipAmount(
+      parsedNumberOfPeople
+        ? Math.round(
+            ((parsedBillAmount * parsedTipMultiplier) / parsedNumberOfPeople) *
+              100
+          ) / 100
+        : 0
+    );
+    setTotal(
+      parsedNumberOfPeople
+        ? Math.round(
+            ((parsedBillAmount * (1 + parsedTipMultiplier)) /
+              parsedNumberOfPeople) *
+              100
+          ) / 100
+        : 0
+    );
+  }, [billAmount, numberOfPeople, tipPercentage]);
+
+  const numberValidation = /^(|[0-9]+)$/;
   const handleBillAmountInput = (e) => {
-    setBillAmount(+e.target.value);
+    const newValue = e.target.value;
+    if (numberValidation.test(newValue)) {
+      setBillAmount(parseInt(newValue, 10) || 0);
+    }
   };
 
   const handleNumberOfPeopleInput = (e) => {
-    setNumberOfPeople(+e.target.value);
+    const newValue = e.target.value;
+    if (numberValidation.test(newValue)) {
+      setNumberOfPeople(parseInt(newValue, 10) || 0);
+    }
   };
 
   return (
@@ -60,7 +92,7 @@ const Calculator = () => {
           </InputGroup>
         </Col>
         <Col>
-          <Results />
+          <Results tipAmount={tipAmount} total={total} />
         </Col>
       </Row>
     </Container>
