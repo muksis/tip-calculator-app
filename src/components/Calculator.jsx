@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form, InputGroup } from 'react-bootstrap';
 import iconDollar from '../images/icon-dollar.svg';
 import iconPerson from '../images/icon-person.svg';
+import TipSelector from './TipSelector';
 
 const Calculator = () => {
   return (
@@ -17,7 +18,7 @@ const Calculator = () => {
           </InputGroup>
           {/* Tip */}
           <Form.Label>Select Tip %</Form.Label>
-          {/* Tip Selector */}
+          <TipSelector />
           {/* Number of People */}
           <Form.Label htmlFor='inputNumberOfPeople'>
             Number of People
