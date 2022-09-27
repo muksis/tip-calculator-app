@@ -5,19 +5,19 @@ const padWithZeroes = (float) =>
 
 const Results = ({ tipAmount, total }) => {
   return (
-    <div className='results'>
-      <div>
+    <div className='results d-flex flex-row flex-wrap'>
+      <div className='valueTitle'>
         Tip Amount
         <sub>/ person</sub>
       </div>
-      <div>${padWithZeroes(tipAmount)}</div>
-      <div>
+      <div className='numericValue'>${padWithZeroes(tipAmount)}</div>
+      <div className='valueTitle'>
         Total
         <sub>/ person</sub>
       </div>
-      <div>${padWithZeroes(total)}</div>
+      <div className='numericValue'>${padWithZeroes(total)}</div>
       <div>
-        <Button>Reset</Button>
+        <Button className='resetButton'>Reset</Button>
       </div>
     </div>
   );
