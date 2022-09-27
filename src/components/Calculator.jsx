@@ -70,6 +70,7 @@ const Calculator = () => {
               <img src={iconDollar} alt='Dollar icon' />
             </InputGroup.Text>
             <Form.Control
+              className={{ 'is-valid': billAmount === 0 }}
               id='inputBill'
               placeholder='0'
               autoComplete='off'
@@ -95,6 +96,7 @@ const Calculator = () => {
               <img src={iconPerson} alt='Person icon' />
             </InputGroup.Text>
             <Form.Control
+              className={{ 'is-valid': numberOfPeople === 0 }}
               id='inputPerson'
               placeholder='0'
               autoComplete='off'
