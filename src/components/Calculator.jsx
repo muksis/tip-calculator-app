@@ -51,9 +51,9 @@ const Calculator = () => {
   };
 
   return (
-    <Container className='calculator'>
+    <Container fluid='sm' className='calculator'>
       <Row>
-        <Col>
+        <Col md className='mb-md-0 mb-5'>
           <Form.Label htmlFor='inputBill'>Bill</Form.Label>
           {/* Bill */}
           <InputGroup>
@@ -69,7 +69,7 @@ const Calculator = () => {
             />
           </InputGroup>
           {/* Tip */}
-          <Form.Label>Select Tip %</Form.Label>
+          <Form.Label className='mt-5'>Select Tip %</Form.Label>
           <TipSelector
             tipPercentage={tipPercentage}
             setTipPercentage={setTipPercentage}

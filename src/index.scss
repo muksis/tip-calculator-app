@@ -31,5 +31,47 @@ body {
     background-color: $white;
     border-radius: 20px;
     padding: 45px;
+
+    ::placeholder {
+      // Chrome, Firefox, Opera, Safari 10.1+
+      color: $grayishCyan;
+      //Firefox
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      // Internet Explorer 10-11
+      color: $grayishCyan;
+    }
+    ::-ms-input-placeholder {
+      // Microsoft Edge
+      color: $grayishCyan;
+    }
+
+    .form-label {
+      display: block;
+      color: $darkGrayishCyan;
+      font-size: 17px;
+    }
+
+    .input-group-text {
+      background-color: $veryLightGrayishCyan;
+      border: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobileWidth) {
+  .app {
+    .calculator {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .tipSelect {
+        .btn,
+        input {
+          width: calc((100% - 40px) / 2) !important;
+        }
+      }
+    }
   }
 }
